@@ -30,7 +30,7 @@ const galleryImages = [
 const theatreCredits = [
   {
     production: "Billy delat på tre",
-    role: "TBD",
+    role: "Actor",
     director: "TBD",
     venue: "TBD",
     year: "2024",

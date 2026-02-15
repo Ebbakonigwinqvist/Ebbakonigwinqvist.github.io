@@ -36,10 +36,10 @@ const theatreCredits = [
     year: "2024",
   },
   {
-    production: "Production Title",
-    role: "Role",
-    director: "Director",
-    venue: "Theatre / Venue",
+    production: "Ingénue",
+    role: "Director, Writer",
+    director: "Ebba König Winqvist",
+    venue: "Telefonfabriken",
     year: "Year",
   },
 ];

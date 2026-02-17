@@ -32,7 +32,7 @@ const theatreCredits = [
     production: "Billy delat på tre",
     role: "Actor",
     director: "TBD",
-    venue: "TBD",
+    venue: "Stockholms konstnärliga högskola",
     year: "2024",
   },
   {

@@ -33,7 +33,7 @@ const theatreCredits = [
     role: "Actor",
     director: "TBD",
     venue: "Stockholms konstnärliga högskola",
-    year: "2024",
+    year: "2025",
   },
   {
     production: "Ingénue",

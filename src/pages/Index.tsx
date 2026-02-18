@@ -29,11 +29,11 @@ const galleryImages = [
 
 const theatreCredits = [
   {
-    production: "Kreon",
+    production: "TOO LATE: KREON ANTIGONE",
     role: "Actor",
-    director: "",
-    venue: "",
-    year: "",
+    director: "Juliann Louise Larsen",
+    venue: "Turteatern",
+    year: "2026",
   },
   {
     production: "Billy delat på tre",

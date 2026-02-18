@@ -1,34 +1,40 @@
 
+## Fix: GitHub Actions Workflow Build Failure
 
-# Ebba König Winqvist — Actor Homepage
+### Root Cause
 
-## Design Direction
-Minimal and elegant single-page site with clean typography, generous white space, and a black & white tone inspired by the profile photo. Smooth scroll navigation between sections.
+The GitHub Actions workflow runs `npm ci` to install dependencies. `npm ci` is strict — it requires the `package-lock.json` to be perfectly in sync with `package.json`. Lovable uses **bun** internally (`bun.lockb` is the real lockfile), so the `package-lock.json` in the repo is likely stale or inconsistent. This causes `npm ci` to fail with exit code 1 before the build even starts.
 
-## Sections
+### The Fix
 
-### 1. Hero / Header
-- Full-width hero with the profile photo (Ebba.jpg) prominently displayed
-- Name "Ebba König Winqvist" in elegant serif or clean sans-serif typography
-- Subtitle: "Actor"
-- Simple top navigation bar with links: Gallery · Resume · Contact
+Update `.github/workflows/deploy.yml` to use **bun** instead of npm, which matches how Lovable manages dependencies:
 
-### 2. Gallery
-- A grid or masonry-style photo gallery showcasing production stills (starting with the Billy_delat_på_tre.jpeg image)
-- Clicking a photo opens a lightbox/modal for a larger view with optional caption (production name, role, photographer credit)
-- Placeholder slots for additional images to be added later
+- Replace `actions/setup-node` with `oven-sh/setup-bun` (the official bun setup action)
+- Replace `npm ci` with `bun install`
+- Replace `npm run build` with `bun run build`
 
-### 3. Resume — Theatre Credits
-- Clean, structured list of theatre credits displayed in a table or card format
-- Columns: Production, Role, Director, Theatre/Venue, Year
-- Placeholder entries to be filled in with real credits
+This ensures the CI environment uses the same package manager as the project, reading from `bun.lockb` instead of the outdated `package-lock.json`.
 
-### 4. Contact
-- Display contact information (email, agent info, etc.) with placeholder text to be updated
-- Links to social media profiles if desired
-- Simple, clean layout
+### Technical Details
 
-### 5. Footer
-- Copyright notice
-- Optional social media icon links
+**Current workflow (broken):**
+```text
+- uses: actions/setup-node@v4
+  with:
+    node-version: 20
+- run: npm ci          ← fails: package-lock.json out of sync
+- run: npm run build
+```
 
+**Updated workflow (fixed):**
+```text
+- uses: oven-sh/setup-bun@v1
+  with:
+    bun-version: latest
+- run: bun install     ← uses bun.lockb, always in sync
+- run: bun run build
+```
+
+### Files to Change
+
+1. `.github/workflows/deploy.yml` — switch from npm to bun for setup, install, and build steps

@@ -29,6 +29,13 @@ const galleryImages = [
 
 const theatreCredits = [
   {
+    production: "Kreon",
+    role: "Actor",
+    director: "",
+    venue: "",
+    year: "",
+  },
+  {
     production: "Billy delat på tre",
     role: "Actor",
     director: "TBD",

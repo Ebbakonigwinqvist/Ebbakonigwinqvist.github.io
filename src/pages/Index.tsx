@@ -182,7 +182,13 @@ const Index = () => {
             <TableBody>
               {theatreCredits.map((c, i) => (
                 <TableRow key={i}>
-                  <TableCell className="font-medium">{c.production}</TableCell>
+                  <TableCell className="font-medium">
+                    {c.production === "TOO LATE: KREON ANTIGONE" ? (
+                      <>TOO LATE: KREON <span className="line-through">ANTIGONE</span></>
+                    ) : (
+                      c.production
+                    )}
+                  </TableCell>
                   <TableCell>{c.role}</TableCell>
                   <TableCell className="hidden md:table-cell">{c.director}</TableCell>
                   <TableCell className="hidden md:table-cell">{c.venue}</TableCell>

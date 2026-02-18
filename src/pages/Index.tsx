@@ -40,7 +40,7 @@ const theatreCredits = [
     role: "Director, Writer",
     director: "Ebba König Winqvist",
     venue: "Telefonfabriken",
-    year: "Year",
+    year: "2004",
   },
 ];
 

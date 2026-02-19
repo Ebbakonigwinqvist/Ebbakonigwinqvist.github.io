@@ -211,18 +211,18 @@ const Index = () => {
           </h2>
           <div className="flex flex-col items-center gap-4 text-muted-foreground">
             <a
-              href="mailto:ebba@example.com"
+              href="mailto:ebba.konig.winqvist@gmail.com"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Mail className="w-4 h-4" />
-              ebba@example.com
+              ebba.konig.winqvist@gmail.com
             </a>
             <a
-              href="tel:+46700000000"
+              href="tel:+46738290180"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              +46 70 000 00 00
+              +46 73 829 01 80
             </a>
             <a
               href="https://instagram.com"

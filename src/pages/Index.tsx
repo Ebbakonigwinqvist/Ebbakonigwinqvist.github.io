@@ -224,7 +224,7 @@ const Index = () => {
               <Phone className="w-4 h-4" />
               +46 73 829 01 80
             </a>
-            <a
+           /* <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -232,7 +232,7 @@ const Index = () => {
             >
               <Instagram className="w-4 h-4" />
               @ebbakonigwinqvist
-            </a>
+            </a> */
           </div>
         </div>
       </section>

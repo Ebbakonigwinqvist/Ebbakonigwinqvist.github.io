@@ -102,7 +102,7 @@ const Index = () => {
             Ebba König Winqvist
           </h1>
           <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground">
-            Actor
+            Kreatör och aktör
           </p>
         </div>
       </header>

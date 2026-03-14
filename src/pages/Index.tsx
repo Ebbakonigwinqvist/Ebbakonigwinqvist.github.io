@@ -25,8 +25,26 @@ const galleryImages = [
   {
     src: billyImg,
     title: "Billy delat på tre",
-    role: "Role TBD",
-    credit: "Photo credit TBD",
+    role: "Skådespelare",
+    credit: "Stockholms konstnärliga högskola",
+  },
+  {
+    src: douImg,
+    title: "Duo",
+    role: "Skådespelare",
+    credit: "TBD",
+  },
+  {
+    src: medeaImg,
+    title: "Medea",
+    role: "Skådespelare",
+    credit: "TBD",
+  },
+  {
+    src: grekImg,
+    title: "Grekisk produktion",
+    role: "Skådespelare",
+    credit: "TBD",
   },
 ];
 

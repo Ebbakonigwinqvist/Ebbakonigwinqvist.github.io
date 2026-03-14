@@ -167,16 +167,16 @@ const Index = () => {
             className="text-3xl md:text-4xl mb-12 text-center"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Theatre Credits
+            Scenografi
           </h2>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Production</TableHead>
-                <TableHead>Role</TableHead>
-                <TableHead className="hidden md:table-cell">Director</TableHead>
-                <TableHead className="hidden md:table-cell">Venue</TableHead>
-                <TableHead>Year</TableHead>
+                <TableHead>Produktion</TableHead>
+                <TableHead>Roll</TableHead>
+                <TableHead className="hidden md:table-cell">Regissör</TableHead>
+                <TableHead className="hidden md:table-cell">Scen</TableHead>
+                <TableHead>År</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

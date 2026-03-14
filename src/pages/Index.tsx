@@ -13,9 +13,9 @@ import ebbaImg from "@/assets/Ebba_beskuren.jpg";
 import billyImg from "@/assets/Billy_delat_pa_tre.jpeg";
 
 const navLinks = [
-  { label: "Gallery", href: "#gallery" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "Galleri", href: "#gallery" },
+  { label: "CV", href: "#resume" },
+  { label: "Kontakt", href: "#contact" },
 ];
 
 const galleryImages = [
@@ -114,7 +114,7 @@ const Index = () => {
             className="text-3xl md:text-4xl mb-12 text-center"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Gallery
+            Galleri
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages.map((img, i) => (
@@ -167,16 +167,16 @@ const Index = () => {
             className="text-3xl md:text-4xl mb-12 text-center"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Theatre Credits
+            Scenografi
           </h2>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Production</TableHead>
-                <TableHead>Role</TableHead>
-                <TableHead className="hidden md:table-cell">Director</TableHead>
-                <TableHead className="hidden md:table-cell">Venue</TableHead>
-                <TableHead>Year</TableHead>
+                <TableHead>Produktion</TableHead>
+                <TableHead>Roll</TableHead>
+                <TableHead className="hidden md:table-cell">Regissör</TableHead>
+                <TableHead className="hidden md:table-cell">Scen</TableHead>
+                <TableHead>År</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -207,7 +207,7 @@ const Index = () => {
             className="text-3xl md:text-4xl mb-12"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Contact
+            Kontakt
           </h2>
           <div className="flex flex-col items-center gap-4 text-muted-foreground">
             <a
@@ -240,7 +240,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="max-w-5xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Ebba König Winqvist. All rights reserved.
+          © {new Date().getFullYear()} Ebba König Winqvist. Alla rättigheter förbehållna.
         </div>
       </footer>
     </div>

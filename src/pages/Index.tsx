@@ -207,7 +207,7 @@ const Index = () => {
             className="text-3xl md:text-4xl mb-12"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Contact
+            Kontakt
           </h2>
           <div className="flex flex-col items-center gap-4 text-muted-foreground">
             <a

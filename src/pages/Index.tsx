@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/table";
 import ebbaImg from "@/assets/Ebba_beskuren.jpg";
 import billyImg from "@/assets/Billy_delat_pa_tre.jpeg";
-import douImg from "@/assets/Duo.JPG";
+import douImg from "@/assets/Duo.jpg";
 import medeaImg from "@/assets/Medea_fall.jpg";
 import grekImg from "@/assets/Ebba_grek.jpg";
 

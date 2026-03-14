@@ -13,9 +13,9 @@ import ebbaImg from "@/assets/Ebba_beskuren.jpg";
 import billyImg from "@/assets/Billy_delat_pa_tre.jpeg";
 
 const navLinks = [
-  { label: "Gallery", href: "#gallery" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "Galleri", href: "#gallery" },
+  { label: "CV", href: "#resume" },
+  { label: "Kontakt", href: "#contact" },
 ];
 
 const galleryImages = [

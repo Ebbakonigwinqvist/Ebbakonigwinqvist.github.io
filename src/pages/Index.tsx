@@ -240,7 +240,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="max-w-5xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Ebba König Winqvist. All rights reserved.
+          © {new Date().getFullYear()} Ebba König Winqvist. Alla rättigheter förbehållna.
         </div>
       </footer>
     </div>

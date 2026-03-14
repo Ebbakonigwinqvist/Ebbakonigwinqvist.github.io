@@ -11,9 +11,6 @@ import {
 } from "@/components/ui/table";
 import ebbaImg from "@/assets/Ebba_beskuren.jpg";
 import billyImg from "@/assets/Billy_delat_pa_tre.jpeg";
-import douImg from "@/assets/Duo.jpg";
-import medeaImg from "@/assets/Medea_fall.jpg";
-import grekImg from "@/assets/Ebba_grek.jpg";
 
 const navLinks = [
   { label: "Galleri", href: "#gallery" },
@@ -25,26 +22,8 @@ const galleryImages = [
   {
     src: billyImg,
     title: "Billy delat på tre",
-    role: "Skådespelare",
-    credit: "Stockholms konstnärliga högskola",
-  },
-  {
-    src: douImg,
-    title: "Duo",
-    role: "Skådespelare",
-    credit: "TBD",
-  },
-  {
-    src: medeaImg,
-    title: "Medea",
-    role: "Skådespelare",
-    credit: "TBD",
-  },
-  {
-    src: grekImg,
-    title: "Grekisk produktion",
-    role: "Skådespelare",
-    credit: "TBD",
+    role: "Role TBD",
+    credit: "Photo credit TBD",
   },
 ];
 

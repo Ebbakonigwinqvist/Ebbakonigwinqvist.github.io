@@ -30,21 +30,21 @@ const galleryImages = [
 const theatreCredits = [
   {
     production: "TOO LATE: KREON ANTIGONE",
-    role: "Actor",
+    role: "Skådespelare",
     director: "Juliann Louise Larsen",
     venue: "Turteatern",
     year: "2026",
   },
   {
     production: "Billy delat på tre",
-    role: "Actor",
+    role: "Skådespelare",
     director: "TBD",
     venue: "Stockholms konstnärliga högskola",
     year: "2025",
   },
   {
     production: "Ingénue",
-    role: "Director, Writer",
+    role: "Regissör, dramatiker",
     director: "Ebba König Winqvist",
     venue: "Telefonfabriken",
     year: "2004",

@@ -18,8 +18,9 @@ import medeaSittImg from "@/assets/Medea_sitt.jpg";
 import medeaTarImg from "@/assets/Medea_tar.jpg";
 
 const navLinks = [
+  { label: "Om", href: "#about" },
   { label: "Galleri", href: "#gallery" },
-  { label: "CV", href: "#resume" },
+  { label: "Produktioner", href: "#resume" },
   { label: "Kontakt", href: "#contact" },
 ];
 

@@ -82,7 +82,14 @@ const theatreCredits = [
     role: "Regissör, dramatiker",
     director: "Ebba König Winqvist",
     venue: "Telefonfabriken",
-    year: "2004",
+    year: "2024",
+  },
+  {
+    production: "Och det vart morgon",
+    role: "Regissör, dramatiker",
+    director: "Ebba König Winqvist",
+    venue: "Audioverk / SCEN DEMON",
+    year: "2023",
   },
 ];
 

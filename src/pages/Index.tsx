@@ -26,12 +26,6 @@ const galleryImages = [
     role: "Role TBD",
     credit: "Photo credit TBD",
   },
-    {
-    src: duoImg,
-    title: "Duo",
-    role: "Role TBD",
-    credit: "Photo credit TBD",
-  },
 ];
 
 const theatreCredits = [

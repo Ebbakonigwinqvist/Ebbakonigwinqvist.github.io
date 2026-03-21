@@ -203,6 +203,27 @@ const Index = () => {
       </Dialog>
 
       {/* Resume */}
+      {/* Om Ebba */}
+      <section id="about" className="py-16 md:py-24 scroll-mt-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2
+            className="text-3xl md:text-4xl mb-8 text-center"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+          >
+            Om Ebba
+          </h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Ebba är en rörelsebaserad kreatör och aktör som utifrån sitt intresse för det förhöjda och outtalade verkar för en konst som utmanar både tanke och ett konventionellt formspråk. Filosofiska frågeställningar får gärna möta det absurda och komiska, ofta med samhällskritiska undertoner. Ebba skapar gärna kollektivt och drev under flera års tid scenen Teater Alma i Stockholm.
+            </p>
+            <p>
+              Utbildad vid Stockholms Konstnärliga Högskola med inriktning mimskådespeleri mellan 2023–2026. Har tidigare gått Biskops Arnös projektlinje i Att skriva Dramatik, Stockholms Elementära teaterskola samt teatervetenskap vid Stockholms universitet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Produktioner */}
       <section id="resume" className="py-16 md:py-24 scroll-mt-20 bg-secondary/50">
         <div className="max-w-5xl mx-auto px-6">
           <h2

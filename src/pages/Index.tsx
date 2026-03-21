@@ -14,6 +14,8 @@ import billyImg from "@/assets/Billy_delat_pa_tre.jpeg";
 import duoImg from "@/assets/Duo.jpg";
 import grekImg from "@/assets/Ebba_grek.jpg";
 import medeaImg from "@/assets/Medea_fall.jpg";
+import medeaSittImg from "@/assets/Medea_sitt.jpg";
+import medeaTarImg from "@/assets/Medea_tar.jpg";
 
 const navLinks = [
   { label: "Galleri", href: "#gallery" },
@@ -43,6 +45,18 @@ const galleryImages = [
   {
     src: medeaImg,
     title: "Medea fall",
+    role: "Role TBD",
+    credit: "Photo credit TBD",
+  },
+  {
+    src: medeaSittImg,
+    title: "Medea sitt",
+    role: "Role TBD",
+    credit: "Photo credit TBD",
+  },
+  {
+    src: medeaTarImg,
+    title: "Medea tår",
     role: "Role TBD",
     credit: "Photo credit TBD",
   },

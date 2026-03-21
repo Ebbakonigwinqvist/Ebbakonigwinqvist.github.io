@@ -32,7 +32,7 @@ const galleryImages = [
   },
   {
     src: duoImg,
-    title: "Duo",
+    title: "I spegeln",
     role: "Role TBD",
     credit: "Photo credit TBD",
   },
@@ -78,6 +78,13 @@ const theatreCredits = [
     year: "2025",
   },
   {
+    production: "I spegeln",
+    role: "Skådespelare",
+    director: "Samskapad",
+    venue: "GBG Mime fest",
+    year: "2025",
+  },
+  {
     production: "Ingénue",
     role: "Regissör, dramatiker",
     director: "Ebba König Winqvist",
@@ -95,21 +102,21 @@ const theatreCredits = [
     production: "Tango",
     role: "Skådespelare - Eleonora",
     director: "Tomas Neumann",
-    venue: "Teater ALma",
+    venue: "Teater Alma",
     year: "2018",
   },
   {
     production: "Balkongen",
     role: "Skådespelare - Chantal",
     director: "Jurek Sawka",
-    venue: "Teater ALma",
+    venue: "Teater Alma",
     year: "2017",
   },
   {
     production: "Mästaren och Margarita",
     role: "Skådespelare - Woland",
     director: "Ivan Mathias Petersson",
-    venue: "Teater ALma",
+    venue: "Teater Alma",
     year: "2016",
   },
 ];

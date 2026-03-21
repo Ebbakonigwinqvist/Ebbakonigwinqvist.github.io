@@ -65,14 +65,14 @@ const galleryImages = [
 const theatreCredits = [
   {
     production: "TOO LATE: KREON ANTIGONE",
-    role: "Skådespelare",
+    role: "Skådespelare - Antigone",
     director: "Juliann Louise Larsen",
     venue: "Turteatern",
     year: "2026",
   },
   {
     production: "Billy delat på tre",
-    role: "Skådespelare",
+    role: "Skådespelare - Billy",
     director: "TBD",
     venue: "Stockholms konstnärliga högskola",
     year: "2025",
@@ -90,6 +90,27 @@ const theatreCredits = [
     director: "Ebba König Winqvist",
     venue: "Audioverk / SCEN DEMON",
     year: "2023",
+  },
+  {
+    production: "Tango",
+    role: "Skådespelare - Eleonora",
+    director: "Tomas Neumann",
+    venue: "Teater ALma",
+    year: "2018",
+  },
+  {
+    production: "Balkongen",
+    role: "Skådespelare - Chantal",
+    director: "Jurek Sawka",
+    venue: "Teater ALma",
+    year: "2017",
+  },
+  {
+    production: "Mästaren och Margarita",
+    role: "Skådespelare - Woland",
+    director: "Ivan Mathias Petersson",
+    venue: "Teater ALma",
+    year: "2016",
   },
 ];
 

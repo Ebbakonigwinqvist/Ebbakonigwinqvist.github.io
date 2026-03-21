@@ -124,6 +124,7 @@ const theatreCredits = [
 
 const Index = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [audioOpen, setAudioOpen] = useState(false);
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
@@ -250,7 +251,47 @@ const Index = () => {
           )}
         </DialogContent>
       </Dialog>
+      
+      {/* Audio Dialog */}
+      <Dialog open={audioOpen} onOpenChange={setAudioOpen}>
+        <DialogContent className="max-w-2xl p-6 bg-background border-border">
+          <div className="space-y-4">
+            <h3
+              className="text-2xl text-center"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+            >
+              Och det vart morgon
+            </h3>
 
+            <p className="text-center text-muted-foreground leading-relaxed">
+              Ljudverk av Ebba König Winqvist. Publicerat via SCEN DEMON.
+            </p>
+
+            <iframe
+              title="Och det vart morgon - SoundCloud"
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1495264783&color=080000"
+              className="w-full"
+            />
+
+            <div className="text-center">
+              <a
+                href="https://soundcloud.com/scendemon/och-det-vart-morgon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
+              >
+                Öppna på SoundCloud
+              </a>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
       {/* Resume */}
 
       {/* Produktioner */}
@@ -276,11 +317,24 @@ const Index = () => {
               {theatreCredits.map((c, i) => (
                 <TableRow key={i}>
                   <TableCell className="font-medium">
-                    {c.production === "TOO LATE: KREON ANTIGONE" ? (
-                      <>TOO LATE: KREON <span className="line-through">ANTIGONE</span></>
-                    ) : (
-                      c.production
-                    )}
+                    <div className="flex flex-col items-start gap-2">
+                      <div>
+                        {c.production === "TOO LATE: KREON ANTIGONE" ? (
+                          <>TOO LATE: KREON <span className="line-through">ANTIGONE</span></>
+                        ) : (
+                          c.production
+                        )}
+                      </div>
+                  
+                      {c.production === "Och det vart morgon" && (
+                        <button
+                          onClick={() => setAudioOpen(true)}
+                          className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          Lyssna
+                        </button>
+                      )}
+                    </div>
                   </TableCell>
                   <TableCell>{c.role}</TableCell>
                   <TableCell className="hidden md:table-cell">{c.director}</TableCell>

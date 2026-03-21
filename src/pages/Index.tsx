@@ -39,7 +39,7 @@ const galleryImages = [
   },
   {
     src: grekImg,
-    title: "Ebba grek",
+    title: "Trojanskorna",
     role: "Roll: Hekabe",
     credit: "Foto: Hjalmar af Klitberg",
   },
@@ -70,6 +70,13 @@ const theatreCredits = [
     director: "Juliann Louise Larsen",
     venue: "Turteatern",
     year: "2026",
+  },
+  {
+    production: "Trojanskorna",
+    role: "Skådespelare - Hekabe",
+    director: "Aleksandra Czarnecki Plaude",
+    venue: "Stockholms konstnärliga högskola",
+    year: "2025",
   },
   {
     production: "Medea (Departure)",

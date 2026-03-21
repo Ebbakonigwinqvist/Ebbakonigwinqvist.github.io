@@ -28,6 +28,24 @@ const galleryImages = [
     role: "Role TBD",
     credit: "Photo credit TBD",
   },
+  {
+    src: duoImg,
+    title: "Duo",
+    role: "Role TBD",
+    credit: "Photo credit TBD",
+  },
+  {
+    src: grekImg,
+    title: "Ebba grek",
+    role: "Role TBD",
+    credit: "Photo credit TBD",
+  },
+  {
+    src: medeaImg,
+    title: "Medea fall",
+    role: "Role TBD",
+    credit: "Photo credit TBD",
+  },
 ];
 
 const theatreCredits = [

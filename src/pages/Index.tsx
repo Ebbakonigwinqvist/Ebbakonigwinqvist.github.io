@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/table";
 import ebbaImg from "@/assets/Ebba_beskuren.jpg";
 import billyImg from "@/assets/Billy_delat_pa_tre.jpeg";
-import duoImg from "@assets/Duo.JPG";
+import duoImg from "@/assets/Duo.JPG";
 
 const navLinks = [
   { label: "Galleri", href: "#gallery" },

@@ -202,7 +202,7 @@ const Index = () => {
             className="text-3xl md:text-4xl mb-12 text-center"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
           >
-            Scenografi
+            Produktioner
           </h2>
           <Table>
             <TableHeader>

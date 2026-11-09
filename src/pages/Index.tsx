@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Instagram, Phone } from "lucide-react";
+import { Mail, Instagram, Phone, Play } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
   Table,
@@ -17,8 +17,31 @@ import medeaImg from "@/assets/Medea_fall.jpg";
 import medeaSittImg from "@/assets/Medea_sitt.jpg";
 import medeaTarImg from "@/assets/Medea_tar.jpg";
 
+// Showreel: byt provider till "vimeo" och id till Vimeo-videons nummer när den har flyttats.
+// YouTube-id är koden efter "v=" eller "youtu.be/" i länken.
+const showreel: {
+  provider: "youtube" | "vimeo";
+  id: string;
+  caption: string;
+} = {
+  provider: "youtube",
+  id: "YOUTUBE_ID",
+  caption: "Showreel 2026",
+};
+
+const showreelEmbedUrl =
+  showreel.provider === "youtube"
+    ? `https://www.youtube-nocookie.com/embed/${showreel.id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`
+    : `https://player.vimeo.com/video/${showreel.id}?dnt=1&title=0&byline=0&portrait=0`;
+
+const showreelPageUrl =
+  showreel.provider === "youtube"
+    ? `https://www.youtube.com/watch?v=${showreel.id}`
+    : `https://vimeo.com/${showreel.id}`;
+
 const navLinks = [
   { label: "Om", href: "#about" },
+  { label: "Showreel", href: "#showreel" },
   { label: "Galleri", href: "#gallery" },
   { label: "Produktioner", href: "#resume" },
   { label: "Kontakt", href: "#contact" },
@@ -139,6 +162,7 @@ const theatreCredits = [
 const Index = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [audioOpen, setAudioOpen] = useState(false);
+  const [reelPlaying, setReelPlaying] = useState(showreel.provider === "vimeo");
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
@@ -149,20 +173,20 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-background/90 backdrop-blur-sm border-b border-border">
-        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+        <div className="max-w-5xl mx-auto flex items-center justify-center md:justify-between px-4 md:px-6 py-4">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-serif text-lg tracking-wide text-foreground"
+            className="hidden md:block font-serif text-lg tracking-wide text-foreground"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
           >
             Ebba König Winqvist
           </button>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 md:gap-8">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs md:text-sm tracking-wide md:tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </button>
@@ -192,6 +216,56 @@ const Index = () => {
           </p>
         </div>
       </header>
+
+      {/* Showreel */}
+      <section id="showreel" className="py-16 md:py-24 scroll-mt-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2
+            className="text-3xl md:text-4xl mb-12 text-center"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+          >
+            Showreel
+          </h2>
+          <div className="relative aspect-video w-full overflow-hidden bg-black">
+            {reelPlaying ? (
+              <iframe
+                title={`${showreel.caption} – Ebba König Winqvist`}
+                src={showreelEmbedUrl}
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            ) : (
+              <button
+                onClick={() => setReelPlaying(true)}
+                aria-label={`Spela ${showreel.caption}`}
+                className="group absolute inset-0 w-full h-full cursor-pointer"
+              >
+                <img
+                  src={`https://i.ytimg.com/vi/${showreel.id}/maxresdefault.jpg`}
+                  alt=""
+                  loading="lazy"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (!img.src.includes("hqdefault")) {
+                      img.src = `https://i.ytimg.com/vi/${showreel.id}/hqdefault.jpg`;
+                    }
+                  }}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <span className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                  <span className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/80 text-white backdrop-blur-[2px] group-hover:scale-105 transition-transform">
+                    <Play className="w-6 h-6 md:w-7 md:h-7 ml-1" fill="currentColor" />
+                  </span>
+                </span>
+              </button>
+            )}
+          </div>
+          <p className="mt-4 text-center text-xs tracking-[0.3em] uppercase text-muted-foreground">
+            {showreel.caption}
+          </p>
+        </div>
+      </section>
       
       {/* Om Ebba */}
       <section id="about" className="py-16 md:py-24 scroll-mt-20">
@@ -394,6 +468,15 @@ const Index = () => {
               <Instagram className="w-4 h-4" />
               @ebbakonigwinqvist
             </a> 
+            <a
+              href={showreelPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-foreground transition-colors"
+            >
+              <Play className="w-4 h-4" />
+              Se showreel
+            </a>
           </div>
         </div>
       </section>

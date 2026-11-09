@@ -40,8 +40,8 @@ const showreelPageUrl =
     : `https://vimeo.com/${showreel.id}`;
 
 const navLinks = [
-  { label: "Om", href: "#about" },
   { label: "Showreel", href: "#showreel" },
+  { label: "Om", href: "#about" },
   { label: "Galleri", href: "#gallery" },
   { label: "Produktioner", href: "#resume" },
   { label: "Kontakt", href: "#contact" },

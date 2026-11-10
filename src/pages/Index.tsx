@@ -251,7 +251,7 @@ const Index = () => {
                       img.src = `https://i.ytimg.com/vi/${showreel.id}/hqdefault.jpg`;
                     }
                   }}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover [@media(hover:hover)]:grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 <span className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
                   <span className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/80 text-white backdrop-blur-[2px] group-hover:scale-105 transition-transform">
@@ -306,7 +306,7 @@ const Index = () => {
                 <img
                   src={img.src}
                   alt={img.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover [@media(hover:hover)]:grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </button>
             ))}

@@ -249,20 +249,20 @@ const Index = () => {
             Kreatör och aktör
           </p>
           {current.length > 0 && (
-            <div className="mt-10 flex flex-col items-center gap-2 text-center">
-              <span className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground">
-                Aktuell
+            <div className="mt-12 md:mt-14 flex flex-col items-center gap-3 text-center">
+              <span className="text-xs md:text-sm tracking-[0.3em] uppercase text-muted-foreground">
+                Aktuell med
               </span>
               {current.map((a) => {
                 const content = (
                   <>
                     <span
-                      className="text-xl md:text-2xl italic text-foreground"
+                      className="text-3xl md:text-4xl italic text-foreground"
                       style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
                     >
                       {a.title}
                     </span>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-base md:text-lg text-muted-foreground">
                       {[a.role && `som ${a.role}`, a.venue].filter(Boolean).join(" · ")}
                       {a.url && " →"}
                     </span>

@@ -460,7 +460,7 @@ const Index = () => {
               +46 73 829 01 80
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/ebbakonigwinqvist/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-foreground transition-colors"

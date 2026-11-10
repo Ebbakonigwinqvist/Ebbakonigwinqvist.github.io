@@ -249,7 +249,8 @@ const Index = () => {
             Kreatör och aktör
           </p>
           {current.length > 0 && (
-            <div className="mt-12 md:mt-14 flex flex-col items-center gap-3 text-center">
+            <div className="mt-10 md:mt-12 flex flex-col items-center gap-3 text-center">
+              <span aria-hidden="true" className="block w-14 h-px bg-border mb-6" />
               <span className="text-xs md:text-sm tracking-[0.3em] uppercase text-muted-foreground">
                 Aktuell med
               </span>
@@ -284,6 +285,7 @@ const Index = () => {
                   </div>
                 );
               })}
+              <span aria-hidden="true" className="block w-14 h-px bg-border mt-6" />
             </div>
           )}
         </div>

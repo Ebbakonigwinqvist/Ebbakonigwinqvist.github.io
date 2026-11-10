@@ -460,13 +460,13 @@ const Index = () => {
               +46 73 829 01 80
             </a>
             <a
-              href="https://www.instagram.com/ebba.konig.winqvist/"
+              href="https://www.instagram.com/ebbakonigwinqvist/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-foreground transition-colors"
             >
               <Instagram className="w-4 h-4" />
-              @ebba.konig.winqvist
+              @ebbakonigwinqvist
             </a> 
             <a
               href={showreelPageUrl}

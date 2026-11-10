@@ -45,6 +45,7 @@ const aktuellt: {
   title: string;
   role?: string;
   venue: string;
+  director?: string;
   until: string;
   url?: string;
 }[] = [
@@ -52,6 +53,7 @@ const aktuellt: {
     title: "Jeremia",
     role: "Baruch",
     venue: "Storkyrkan, Gamla stan",
+    director: "Peter Oskarson",
     until: "2027-01-31",
   },
 ];
@@ -267,6 +269,11 @@ const Index = () => {
                       {[a.role && `som ${a.role}`, a.venue].filter(Boolean).join(" · ")}
                       {a.url && " →"}
                     </span>
+                    {a.director && (
+                      <span className="text-base md:text-lg text-muted-foreground">
+                        I regi av {a.director}
+                      </span>
+                    )}
                   </>
                 );
                 return a.url ? (

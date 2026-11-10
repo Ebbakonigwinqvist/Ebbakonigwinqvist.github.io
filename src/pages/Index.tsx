@@ -271,7 +271,7 @@ const Index = () => {
                     </span>
                     {a.director && (
                       <span className="text-base md:text-lg text-muted-foreground">
-                        I regi av {a.director}
+                        i regi av {a.director}
                       </span>
                     )}
                   </>

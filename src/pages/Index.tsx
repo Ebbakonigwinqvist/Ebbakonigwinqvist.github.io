@@ -114,8 +114,8 @@ const theatreCredits = [
   {
     production: "SHOW(ER)",
     role: "Skådespelare, medskapare",
-    director: "Samskapad",
-    venue: "Folkteatern Göteborg",
+    director: "Samskapad - Scenkonstgruppen D(USCH)",
+    venue: "Folkteatern Göteborg - Gästspel",
     year: "2026",
   },
   {
@@ -142,7 +142,7 @@ const theatreCredits = [
   {
     production: "Billy delat på tre",
     role: "Skådespelare - Billy",
-    director: "TBD",
+    director: "Samskapad",
     venue: "Stockholms konstnärliga högskola",
     year: "2025",
   },

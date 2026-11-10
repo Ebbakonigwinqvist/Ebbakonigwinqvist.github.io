@@ -230,7 +230,7 @@ const Index = () => {
       </nav>
 
       {/* Hero */}
-      <header className="pt-24 pb-16 md:pt-32 md:pb-24">
+      <header className="pt-24 pb-4 md:pt-32 md:pb-8">
         <div className="max-w-5xl mx-auto px-6 flex flex-col items-center">
           <div className="w-64 h-80 md:w-80 md:h-[26rem] overflow-hidden mb-10">
             <img
@@ -292,7 +292,7 @@ const Index = () => {
       </header>
 
       {/* Showreel */}
-      <section id="showreel" className="py-16 md:py-24 scroll-mt-20">
+      <section id="showreel" className="py-14 md:py-20 scroll-mt-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2
             className="text-3xl md:text-4xl mb-12 text-center"
@@ -342,7 +342,7 @@ const Index = () => {
       </section>
       
       {/* Om Ebba */}
-      <section id="about" className="py-16 md:py-24 scroll-mt-20">
+      <section id="about" className="py-14 md:py-20 scroll-mt-20 bg-secondary/50">
         <div className="max-w-3xl mx-auto px-6">
           <h2
             className="text-3xl md:text-4xl mb-8 text-center"
@@ -362,7 +362,7 @@ const Index = () => {
       </section>
       
       {/* Gallery */}
-      <section id="gallery" className="py-16 md:py-24 scroll-mt-20">
+      <section id="gallery" className="py-14 md:py-20 scroll-mt-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2
             className="text-3xl md:text-4xl mb-12 text-center"
@@ -457,7 +457,7 @@ const Index = () => {
       {/* Resume */}
 
       {/* Produktioner */}
-      <section id="resume" className="py-16 md:py-24 scroll-mt-20 bg-secondary/50">
+      <section id="resume" className="py-14 md:py-20 scroll-mt-20 bg-secondary/50">
         <div className="max-w-5xl mx-auto px-6">
           <h2
             className="text-3xl md:text-4xl mb-12 text-center"
@@ -510,7 +510,7 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-16 md:py-24 scroll-mt-20">
+      <section id="contact" className="py-14 md:py-20 scroll-mt-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2
             className="text-3xl md:text-4xl mb-12"

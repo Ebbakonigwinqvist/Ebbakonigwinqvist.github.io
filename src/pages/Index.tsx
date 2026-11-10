@@ -95,6 +95,13 @@ const theatreCredits = [
     year: "2026",
   },
   {
+    production: "SHOW(ER)",
+    role: "Skådespelare, medskapare",
+    director: "Samskapad",
+    venue: "Folkteatern Göteborg",
+    year: "2026",
+  },
+  {
     production: "Trojanskorna",
     role: "Skådespelare - Hekabe",
     director: "Aleksandra Czarnecki Plaude",

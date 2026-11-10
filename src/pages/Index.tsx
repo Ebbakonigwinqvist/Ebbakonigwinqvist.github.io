@@ -88,17 +88,17 @@ const galleryImages = [
 
 const theatreCredits = [
   {
-    production: "TOO LATE: KREON ANTIGONE",
-    role: "Skådespelare - Antigone",
-    director: "Juliann Louise Larsen",
-    venue: "Turteatern",
-    year: "2026",
-  },
-  {
     production: "SHOW(ER)",
     role: "Skådespelare, medskapare",
     director: "Samskapad",
     venue: "Folkteatern Göteborg",
+    year: "2026",
+  },
+  {
+    production: "TOO LATE: KREON ANTIGONE",
+    role: "Skådespelare - Antigone",
+    director: "Juliann Louise Larsen",
+    venue: "Turteatern",
     year: "2026",
   },
   {

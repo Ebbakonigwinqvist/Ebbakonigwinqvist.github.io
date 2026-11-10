@@ -39,6 +39,23 @@ const showreelPageUrl =
     ? `https://www.youtube.com/watch?v=${showreel.id}`
     : `https://vimeo.com/${showreel.id}`;
 
+// Aktuellt: visas under namnet till och med slutdatum ("until"), försvinner sedan automatiskt.
+// "url" är valfri (t.ex. biljetter). Finns inget aktuellt visas ingenting.
+const aktuellt: {
+  title: string;
+  role?: string;
+  venue: string;
+  until: string;
+  url?: string;
+}[] = [
+  {
+    title: "Jeremia",
+    role: "Baruch",
+    venue: "Storkyrkan, Gamla stan",
+    until: "2027-01-31",
+  },
+];
+
 const navLinks = [
   { label: "Showreel", href: "#showreel" },
   { label: "Om", href: "#about" },
@@ -87,6 +104,13 @@ const galleryImages = [
 ];
 
 const theatreCredits = [
+  {
+    production: "Jeremia",
+    role: "Skådespelare - Baruch",
+    director: "Peter Oskarson",
+    venue: "Storkyrkan Gamla stan",
+    year: "2027",
+  },
   {
     production: "SHOW(ER)",
     role: "Skådespelare, medskapare",
@@ -169,6 +193,9 @@ const theatreCredits = [
 const Index = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [audioOpen, setAudioOpen] = useState(false);
+  const today = new Date();
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+  const current = aktuellt.filter((a) => a.until >= todayStr);
   const [reelPlaying, setReelPlaying] = useState(showreel.provider === "vimeo");
 
   const scrollTo = (href: string) => {
@@ -221,6 +248,44 @@ const Index = () => {
           <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground">
             Kreatör och aktör
           </p>
+          {current.length > 0 && (
+            <div className="mt-10 flex flex-col items-center gap-2 text-center">
+              <span className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground">
+                Aktuell
+              </span>
+              {current.map((a) => {
+                const content = (
+                  <>
+                    <span
+                      className="text-xl md:text-2xl italic text-foreground"
+                      style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}
+                    >
+                      {a.title}
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      {[a.role && `som ${a.role}`, a.venue].filter(Boolean).join(" · ")}
+                      {a.url && " →"}
+                    </span>
+                  </>
+                );
+                return a.url ? (
+                  <a
+                    key={a.title}
+                    href={a.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-1 hover:opacity-70 transition-opacity"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={a.title} className="flex flex-col items-center gap-1">
+                    {content}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </header>
 

@@ -16,6 +16,10 @@ import grekImg from "@/assets/Ebba_grek.jpg";
 import medeaImg from "@/assets/Medea_fall.jpg";
 import medeaSittImg from "@/assets/Medea_sitt.jpg";
 import medeaTarImg from "@/assets/Medea_tar.jpg";
+import portratt1Img from "@/assets/Portratt_1.jpg";
+import portratt2Img from "@/assets/Portratt_2.jpg";
+import portratt3Img from "@/assets/Portratt_3.jpg";
+import portratt4Img from "@/assets/Portratt_4.jpg";
 
 // Showreel: byt provider till "vimeo" och id till Vimeo-videons nummer när den har flyttats.
 // YouTube-id är koden efter "v=" eller "youtu.be/" i länken.
@@ -67,6 +71,10 @@ const navLinks = [
 ];
 
 const galleryImages = [
+  { src: portratt1Img, title: "Porträtt", role: "", credit: "" },
+  { src: portratt2Img, title: "Porträtt", role: "", credit: "" },
+  { src: portratt3Img, title: "Porträtt", role: "", credit: "" },
+  { src: portratt4Img, title: "Porträtt", role: "", credit: "" },
   {
     src: billyImg,
     title: "Billy delat på tre",
@@ -412,9 +420,13 @@ const Index = () => {
                 <p className="font-medium text-foreground">
                   {galleryImages[lightbox].title}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  {galleryImages[lightbox].role} · {galleryImages[lightbox].credit}
-                </p>
+                {[galleryImages[lightbox].role, galleryImages[lightbox].credit].some((t) => t.trim()) && (
+                  <p className="text-sm text-muted-foreground">
+                    {[galleryImages[lightbox].role, galleryImages[lightbox].credit]
+                      .filter((t) => t.trim())
+                      .join(" · ")}
+                  </p>
+                )}
               </div>
             </div>
           )}

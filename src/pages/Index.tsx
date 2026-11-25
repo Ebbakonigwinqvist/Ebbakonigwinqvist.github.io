@@ -70,43 +70,59 @@ const navLinks = [
   { label: "Kontakt", href: "#contact" },
 ];
 
+// Förminskade 3:4-versioner för galleriets rutor (skapade med Lanczos för skarpare resultat än webbläsarens egen förminskning).
+// Originalen används när en bild öppnas stort.
+const thumbUrls = import.meta.glob("../assets/thumbs/*.jpg", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+const thumbSrcSet = (name: string) =>
+  `${thumbUrls[`../assets/thumbs/${name}-480.jpg`]} 480w, ${thumbUrls[`../assets/thumbs/${name}-960.jpg`]} 960w`;
+
 const galleryImages = [
-  { src: portratt1Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
-  { src: portratt2Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
-  { src: portratt3Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
-  { src: portratt4Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt1Img, thumb: "Portratt_1", title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt2Img, thumb: "Portratt_2", title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt3Img, thumb: "Portratt_3", title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt4Img, thumb: "Portratt_4", title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
   {
     src: billyImg,
+    thumb: "Billy_delat_pa_tre",
     title: "Billy delat på tre",
     role: "Roll: Billy",
     credit: "Foto: Per Bolkert",
   },
   {
     src: duoImg,
+    thumb: "Duo",
     title: "I spegeln",
     role: " ",
     credit: "Foto: Mehdi Arabi",
   },
   {
     src: grekImg,
+    thumb: "Ebba_grek",
     title: "Trojanskorna",
     role: "Roll: Hekabe",
     credit: "Foto: Hjalmar af Klitberg",
   },
   {
     src: medeaImg,
+    thumb: "Medea_fall",
     title: "Medea",
     role: "Roll: Medea",
     credit: "Foto: Hjalmar af Klintberg",
   },
   {
     src: medeaSittImg,
+    thumb: "Medea_sitt",
     title: "Medea",
     role: "Roll: Medea",
     credit: "Foto: Hjalmar af Klintberg",
   },
   {
     src: medeaTarImg,
+    thumb: "Medea_tar",
     title: "Medea",
     role: "Roll: Medea",
     credit: "Foto: Hjalmar af Klintberg",
@@ -393,7 +409,11 @@ const Index = () => {
                 className="aspect-[3/4] overflow-hidden group cursor-pointer"
               >
                 <img
-                  src={img.src}
+                  src={thumbUrls[`../assets/thumbs/${img.thumb}-960.jpg`]}
+                  srcSet={thumbSrcSet(img.thumb)}
+                  sizes="(min-width: 768px) 315px, (min-width: 640px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                   alt={img.title}
                   className="w-full h-full object-cover [@media(hover:hover)]:grayscale group-hover:grayscale-0 transition-all duration-500"
                 />

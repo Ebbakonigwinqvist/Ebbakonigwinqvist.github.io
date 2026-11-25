@@ -71,10 +71,10 @@ const navLinks = [
 ];
 
 const galleryImages = [
-  { src: portratt1Img, title: "Porträtt", role: "", credit: "" },
-  { src: portratt2Img, title: "Porträtt", role: "", credit: "" },
-  { src: portratt3Img, title: "Porträtt", role: "", credit: "" },
-  { src: portratt4Img, title: "Porträtt", role: "", credit: "" },
+  { src: portratt1Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt2Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt3Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
+  { src: portratt4Img, title: "Porträtt", role: "", credit: "Foto: Therese Aldgård" },
   {
     src: billyImg,
     title: "Billy delat på tre",
